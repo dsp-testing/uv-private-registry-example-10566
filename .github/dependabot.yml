@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "uv"
+    directory: "python/uv/with-lock/"
+    versioning-strategy: "increase"
+    insecure-external-code-execution: allow
+    schedule:
+      interval: "weekly"
+    registries:
+      - python-artifactory
+
+registries:
+  python-artifactory:
+    type: "python-index"
+    url: "https://jfrogghdemo.jfrog.io/artifactory/api/pypi/db-dependbot-python/simple"
+    username: "thavaahariharangit@github.com"  # Store username in GitHub Secrets
+    password: "${{ secrets.PYTHON_TOKEN }}"
+    replaces-base: true
