@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "uv"
-    directory: "python/uv/with-lock/"
+    directory: "/"
     versioning-strategy: "increase"
     insecure-external-code-execution: allow
     schedule:
